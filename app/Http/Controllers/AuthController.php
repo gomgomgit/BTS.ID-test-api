@@ -52,7 +52,6 @@ class AuthController extends Controller
             'user.name' => 'required|string',
             'user.postcode' => 'required|string',
         ]);
-        // dd($request->all());
         if ($validator->fails()) {
             return response()->json($validator->errors()->toJson(), 400);
         }
